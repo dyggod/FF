@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>超跑首页</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/ff-index.css"/>
+    <script src='js/jquery-1.11.3.js'></script> 
+</head>
+<body>
+    <!-- 头部 header-->
+    <header id="header">
+       
+    </header>
+    <!-- 内容section-->
+    <section>
+        <!-- 头部背景-->
+        <div class="header-bg container-fluid"></div>
+        <!-- 轮播图-->
+        <div class="container-fluid mt-1 p-0">
+             <div id="content" class="carousel" data-ride="carousel">
+                 <!-- 图片-->
+                <div class="carousel-inner" >
+                    <div class="carousel-item active">
+                        <a href="#">
+                            <img class="w-100 h-100" src="upload/images/20181229/20197144002.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img class="w-100" src="upload/images/20190108/4103217.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                            <img class="w-100" src="upload/images/20181204/2340841.jpg" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                 <!-- 左右小标-->
+                 <a href="#" class="carousel-control-next" data-slide="next" data-target="#content">
+                     <span class="carousel-control-next-icon"></span>
+                 </a>
+                 <a href="#" class="carousel-control-prev" data-slide="prev" data-target="#content">
+                     <span class="carousel-control-prev-icon"></span>
+                 </a>
+                 <!-- 轮播指示符-->
+                <ul class="carousel-indicators">
+                     <li data-target="#content" data-slide-to="0" class="active"></li>
+                     <li data-target="#content" data-slide-to="1"></li>
+                     <li data-target="#content" data-slide-to="2"></li>
+                </ul>
+             </div>
+        </div>
+        <!-- 车型导航-->
+        <div class="car-type container-fluid row m-auto p-0">
+            <div class="car-tl col-md-6">
+                <div class="row">
+                    <div class="col-md-5 p-0 text-center pr-2">
+                        <img class="w-100" src="upload/images/20190322/201903111510135186608.png" alt=""/>
+                        <a href="#" class="text-light">神车空降成都</a>
+                    </div>
+                    <div class="col-md-7 card p-0">
+                        <div class="card-title m-0">
+                            <h3 class="text-light">最新消息/NEWS</h3>
+                            <img src="templates/cn/images/main_img7.jpg" alt=""/>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-unstyled">
+                                <li class="d-flex ">
+                                    <div class="card-bd1">
+                                        <p class="">06</p>
+                                        <p class="">2019-3</p>
+                                    </div>
+                                    <div class="text-truncate pl-3 text-center">
+                                        <a href="#" >飞飞联手1500名车俱乐部为中国汽车文化做出新贡献</a>
+                                        <p>2019感恩过去,展望未来,凝心聚力 蓄势前行</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex border-top-0">
+                                    <div class="card-bd1">
+                                        <p>06</p>
+                                        <p>2019-3</p>
+                                    </div>
+                                    <div class="text-truncate pl-3 text-center">
+                                        <a href="#">飞飞联手1500名车俱乐部为中国汽车文化做出新贡献</a>
+                                        <p>2019感恩过去,展望未来,凝心聚力 蓄势前行</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex border-top-0">
+                                    <div class="card-bd1">
+                                        <p>06</p>
+                                        <p>2019-3</p>
+                                    </div>
+                                    <div class="text-truncate pl-3 text-center">
+                                        <a href="#">飞飞联手1500名车俱乐部为中国汽车文化做出新贡献</a>
+                                        <p>2019感恩过去,展望未来,凝心聚力 蓄势前行</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn border ">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="car-tr col-md-6 mb-2">
+                <div class="car-tr-t text-center">
+                    <h3 class="text-light">热门车型/MODELS</h3>
+                    <img src="templates/cn/images/main_img7.jpg" alt=""/>
+                </div>
+                <div class="car-tr-bt">
+                    <table class="table">
+                        <tr id='brandTr1' class="relative">
+                            
+                        </tr>
+                        <tr id='brandTr2' class="tr2">    
+                                                 
+                        </tr>
+                    </table>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn border ">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        <!-- 推荐车型-->
+        <div class="container-fluid">
+            <div class="recommend" >
+                <div class="reco-titile">
+                    <div>
+                        推荐车型/ <span>MODELS</span>
+                    </div>
+                    <p class="text-center">
+                        <img src="templates/cn/images/main_img7.jpg" alt=""/>
+                    </p>
+                </div>
+                <ul id="recommendUl"class="d-flex list-unstyled flex-lg-nowrap flex-sm-wrap"> 
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- 爆款车型-->
+        <div class="container-fluid">
+            <div class="recommend">
+                <div class="reco-titile">
+                    <div>
+                        爆款车型/ <span>MODELS</span>
+                    </div>
+                    <p class="text-center">
+                        <img src="templates/cn/images/main_img7.jpg" alt=""/>
+                    </p>
+                </div>
+                <ul class="d-flex list-unstyled flex-lg-nowrap flex-sm-wrap">
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20190124/DSC_09138056445.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                <div>参考价:¥18000</div>
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">兰博基尼Huracan LP610-4</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">兰博基尼</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="ff-detail.html?cid=2&tab=ff_cp" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20190124/DSC_09138056445.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                参考价:¥18000
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">兰博基尼Huracan LP610-4</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">兰博基尼</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20190124/DSC_09138056445.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                参考价:¥18000
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">兰博基尼Huracan LP610-4</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">兰博基尼</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20190124/DSC_09138056445.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                参考价:¥18000
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">兰博基尼Huracan LP610-4</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">兰博基尼</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 人气新车-->
+        <div class="container-fluid">
+            <div class="recommend">
+                <div class="reco-titile">
+                    <div>
+                        人气新车/ <span>MODELS</span>
+                    </div>
+                    <p class="text-center">
+                        <img src="templates/cn/images/main_img7.jpg" alt=""/>
+                    </p>
+                </div>
+                <ul class="d-flex list-unstyled flex-lg-nowrap flex-sm-wrap">
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20171013/bai9004210714.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                <div>参考价:¥18000</div>
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">劳斯莱斯古斯特</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">劳斯莱斯</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20171013/bai9004210714.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                参考价:¥18000
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">劳斯莱斯古斯特</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">劳斯莱斯</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20171013/bai9004210714.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                参考价:¥18000
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">劳斯莱斯古斯特</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">劳斯莱斯</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reco-li text-light">
+                        <a href="#" class="li-model position-relative">
+                            <img class="w-100 img-model" src="upload/images/20171013/bai9004210714.jpg" alt=""/>
+                            <div class="pf-img-model text-light">
+                                参考价:¥18000
+                            </div>
+                        </a>
+                        <div class="card reco-card pb-0">
+                            <div class="card-header text-center mt-4">
+                                <a class="d-inline-block" href="#">劳斯莱斯古斯特</a>
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#">劳斯莱斯</a>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="float-left">查看详细&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                                <a href="#" class="float-right">在线预订&nbsp;&nbsp;&nbsp;
+                                    <img class="" src="templates/cn/images/main_img11.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+    <footer id='footer'>
+       
+    </footer>
+    <script src='js/ajax.js'></script>       
+    <script src='js/ff-header.js'></script>
+    <script src='js/footer.js'></script>
+    <script src='js/index.js'></script>
+</body>
+</html>
