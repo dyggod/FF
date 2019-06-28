@@ -1,0 +1,111 @@
+body{
+    background-color: #202020;
+}
+/*头部 header*/
+header>div.container-fluid{
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+div.header-left{
+    border-right: 1px solid #666;
+    line-height: 4rem;
+}
+/*头部右部分*/
+div.header-rt{
+    border-bottom: 1px solid #666;
+    line-height: 32px;
+}
+div.header-rt>img{
+    height: 15px;
+    width: 15px;
+}
+span.s1{
+    color:#a5a5a5;
+    font-size: 12px;
+}
+span.s2{
+    color: #fff;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 28px;
+}
+/*折叠导航栏*/
+
+li.nav-item+li.nav-item{
+    border-left: 1px solid #666;
+}
+div.navbar li{
+    text-align: center;
+    line-height: 2rem;
+}
+div.navbar>div>ul>li>a{
+    color: #fff !important;
+    font-size: 14px;
+}
+/*小电话*/
+div.phone{
+    width: 7%;
+    height:48px;
+    border-left: 1px solid #666;
+    text-align: center;
+    line-height: 2.5rem;
+}
+/* 登录弹窗 固定于文档窗口 */
+div.alert{
+    left: 50%;top: 50%;
+    width:500px;height:280px;
+    margin-left:-250px;margin-top:-125px;
+    z-index: 1000; 
+    border:2px solid #666;
+    color:#922;
+    background:#202020;
+    position:fixed;
+    padding:0 0 0 1rem;
+    display: none;
+}
+div.alert>table{
+    width: 75%;
+    height: 9rem;
+}
+div.alert td{
+    height: 2.5rem;
+    line-height:2.5rem;
+}
+div.alert tr>td>input{
+    padding-left: 0.5rem;
+    color:#666;
+    font-size: 18px;
+    background-image: url('../templates/cn/images/down_img1.jpg');
+    outline: 0;
+    border:1px solid #666;
+    cursor: pointer;
+}
+div.alert tr>td>input:focus{
+    border-color: rgba(0, 123, 255,0.5);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+div.alert>.close{
+    color:#aaa;
+    float:right;
+    font-weight:bold;
+    opacity:.5;
+    cursor:pointer;
+}
+div.alert button{
+    background-color: #5d5d5d;
+    color:#ddd;
+}
+div.alert td.vali-info{
+    opacity:0;
+}
+div.alert td.vali-false{
+    opacity: 1;
+    background-color:#1a1a1a;
+    color:Red;
+    padding-left:10px;
+}
+
+/* *****头部背景 */
+section div.header-bg {
+    background-color: #000;
+    height: 5rem; }

@@ -1,0 +1,179 @@
+body {
+  background-color: #202020; }
+
+header > div.container-fluid {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; }
+
+section div.header-bg {
+  background-color: #000;
+  height: 5rem; }
+
+section div.sec-top {
+  background-color: #000;
+  margin-top: 0.5rem; }
+
+section div.sec-nav {
+  background-color: #000; }
+  section div.sec-nav div.sec-vip {
+    background-color: #202020;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-top: 8px solid #000; }
+  section div.sec-nav div.sec-vip > div > p {
+    color: #aaa;
+    margin-bottom: 0; }
+  section div.sec-nav div.sec-vip > div > p:first-child {
+    height: 2rem;
+    background: url("../templates/cn/images/about_img3.jpg") top center no-repeat; }
+  section div.sec-nav div.sec-vip > div > p.vip {
+    color: #fff;
+    font-size: 26px; }
+  section div.sec-nav div.sec-vip > div > p:last-child {
+    display: inline-block;
+    width: 8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #666; }
+  section div.sec-nav div.sec-top a {
+    width: 8rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #ddd;
+    font-size: 18px;
+    text-decoration: none; }
+  section div.sec-nav div.sec-top a:hover {
+    background-color: #202020;
+    border-bottom: 2px solid #fff;
+    color: #fff; }
+  section div.sec-nav div.sec-brand div.brand-car {
+    height: 500px;
+    transition: height 0.5s linear;
+    overflow: hidden; }
+  section div.sec-nav div.sec-brand div.brand-search {
+    border-top: 1px solid #666;
+    padding: 2rem 5rem; }
+    section div.sec-nav div.sec-brand div.brand-search > div {
+      padding: 0 4rem; }
+    section div.sec-nav div.sec-brand div.brand-search div > span {
+      color: #7b7b7b;
+      font-size: 14px;
+      padding-top: 0.25rem;
+      margin-left: 1.5rem; }
+    section div.sec-nav div.sec-brand div.brand-search div > a {
+      color: #666;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 1.5rem; }
+    section div.sec-nav div.sec-brand div.brand-search div > a:hover {
+      color: #fff; }
+  section div.sec-nav div.sec-brand div.brand-img {
+    padding: 0 4rem; }
+    section div.sec-nav div.sec-brand div.brand-img table tr {
+      border: 1px solid #666; }
+    section div.sec-nav div.sec-brand div.brand-img table td {
+      width: 20%; }
+    section div.sec-nav div.sec-brand div.brand-img table td + td {
+      border-left: 1px solid #666; }
+    section div.sec-nav div.sec-brand div.brand-img table.tab2 tr:last-child > td {
+      border-right: 1px solid #666; }
+
+section div.recommend > div.reco-titile > div {
+  height: 5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  line-height: 5rem; }
+
+section div.recommend > div.reco-titile > p {
+  margin-top: -30px; }
+
+section div.recommend > div.reco-titile > div > span {
+  color: #666;
+  font-size: 18px; }
+
+section div.recommend li.reco-li {
+  border-left: 1px solid #666;
+  border-bottom: 1px solid #666;
+  border-top: 1px solid #666; }
+
+section div.recommend div.reco-card, section div.recommend div.reco-card > div {
+  background-color: #202020;
+  border: 0; }
+
+section div.recommend div.card a {
+  text-decoration: none; }
+
+section div.recommend div.card > div.card-header > a {
+  height: 2.5rem;
+  color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  line-height: 2.5rem; }
+
+section div.recommend div.card > div.card-body {
+  padding-top: 0;
+  padding-bottom: 2rem; }
+
+section div.recommend div.card-body a {
+  color: #aaa;
+  font-size: 12px;
+  text-decoration: none; }
+
+section div.recommend div.card a:hover {
+  color: #ffffff; }
+
+section div.recommend div.card > div.card-footer {
+  padding: 0; }
+
+section div.recommend div.card > div.card-footer > a {
+  width: 50%;
+  height: 3rem;
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  text-align: center;
+  line-height: 3rem;
+  color: #aaa; }
+
+section div.recommend div.card > div.card-footer > a:hover {
+  background-color: #303030;
+  color: #fff !important; }
+
+section div.recommend a.li-model {
+  display: block;
+  height: auto; }
+
+section div.recommend div.pf-img-model {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  text-align: center; }
+
+section div.recommend > ul > li:hover div.pf-img-model {
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+
+section div.recommend > ul > li:hover {
+  cursor: pointer; }
+
+section div.recommend > ul > li:hover img.img-model {
+  opacity: 0.4;
+  transition: all 1s; }
+
+@media screen and (min-width: 768px) {
+  div.recommend li.reco-li {
+    width: 25%; } }
+
+@media screen and (max-width: 767px) {
+  div.recommend li.reco-li {
+    width: 100%; }
+  div.brand-search, div.brand-search > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+  section div.sec-nav div.sec-brand div.brand-car {
+    height: 800px; } }

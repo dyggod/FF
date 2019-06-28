@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>用户列表</title>
+ </head>
+ <body onload='get_list()'>
+	<table border='1px'>
+		<thead>
+			<th>用户名称</th>
+			<th>用户密码</th>
+			<th>联系方式</th>
+			<th>真实姓名</th>
+			<th>用户性别</th>
+			<th>操作</th>
+		</thead>
+		<tbody id='t_body'>
+			
+		</tbody>
+	</table>	
+	<script>
+		//页面一加载完成得到用户列表事件
+		function get_list(){
+			//1.
+			var xhr=new XMLHttpRequest();
+			//2.
+			xhr.open('get','/user/list',true);
+			//3.
+			xhr.send();
+			//4.
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					//console.log(111)
+					//json解析
+					var users=JSON.parse(result);
+					var html='';
+					//console.log(users);
+					for (var i=0;i<users.length ;i++ )
+					{
+						//console.log(111)
+						//console.log(users[i].email);
+						//性别显示的转换
+						var show_g='';
+						if (users[i].gender=='1')
+						{
+							show_g='男';
+						}else if (users[i].gender==0)
+						{
+							show_g='女';
+						}
+						html+=`
+								<tr>
+								<td>${users[i].uname}</td>
+								<td>${users[i].upwd}</td>
+								<td>${users[i].phone}</td>
+								<td>${users[i].user_name}</td>
+								<td>${show_g}</td>
+								<td>
+									<a href='javascript:del_user(${users[i].uid})'>删除</a>
+									<a href='http://127.0.0.1:8080/user_update.html?uid=${users[i].uid}'>修改</a>
+								
+								</td>
+							</tr>
+						`;
+					}
+					t_body.innerHTML=html;
+				}
+			};
+		};
+		//列表内删除用户事件
+		function del_user(uid){
+			//	1.
+			var xhr=new XMLHttpRequest();
+			//2.
+			xhr.open('get','/user/del_user?uid='+uid,true);
+			//3.
+			xhr.send();
+			//4.
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					if (result=='200')
+					{						
+						alert('删除成功');
+						get_list();
+					}else if (result=='409')
+					{
+						alert('删除失败')
+					}
+				}
+			};
+		};
+		
+	</script>
+ </body>
+</html>

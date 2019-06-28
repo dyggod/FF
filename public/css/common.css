@@ -1,0 +1,49 @@
+
+
+
+/*媒体查询*/
+    /*中屏*/
+@media screen and (max-width: 991px) and (min-width: 768px){
+    li.nav-item+li.nav-item{
+        border-left:0;
+    }
+    li.nav-item{
+        border-top: 1px solid #666;
+        border-right: 1px solid #666;
+    }
+    div.phone{
+        border-left:0;
+    }
+ 
+}
+@media screen and (max-width:767px){
+    div.header-rt{
+        border-top: 1px solid #666;
+    }
+    div.phone{
+        border-left: 0;
+    }
+    ul.navbar-nav>li{
+        border-left:0 !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

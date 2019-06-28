@@ -1,0 +1,183 @@
+*{margin:0;padding:0;}
+/*1.头部*/
+	/*头部top1	*/
+		#header-top{
+			width:100%;height:37px;
+			background:#F3F3F3;
+			line-height:37px;
+			display:flex;
+			justify-content:space-between;
+		}
+		#header-top #left{
+			width:240px;
+			line-height:37px;
+			color:#666;
+			font-size:14px;
+			margin-left:50px;
+		}
+		#header-top img{
+			width:16px;height:16px;
+			vertical-align:middle;
+		}
+		#header-top a{
+		color:#666;
+			font-size:14px;
+			text-decoration:none;
+		}
+		#header-top #city{
+			color:#FF5F8C;
+		}
+	/*头部top2	*/
+		#header-top #right{
+			width:411px;
+			line-height:37px;
+			color:#666;
+			font-size:14px;
+			margin-right:50px;
+		}
+	/*头部bottom	*/
+		#header-bt{
+			width:100%;height:60px;
+			position:relative;
+			padding:15px;
+		}
+		#header-bt div{
+			width:560px;
+			position:absolute;
+			left:155px;
+			line-height:60px;
+		}
+		
+		#header-bt div span{
+			color:#666;
+			font-size:28px;
+		}
+/*2.内容部分*/
+	/*内容top	*/
+		#sec{
+			width:1000px;height:500px;
+			padding-left:150px;
+			padding-right:150px;
+			position:relative;
+			border-bottom:1px solid #FF5F8C;
+		}
+		#sec ul{
+			width:360px;height:50px;
+			list-style:none;
+			color:#666;
+			font-size:20px;
+			line-height:50px;
+			display:flex;
+			justify-content:space-around;
+		}
+		#sec ul li:hover{
+			border-top:2px solid #FF5F8C;
+		}
+	/*内容-注册表		*/
+		#sec table{
+			width:600px;
+			clear:both;
+			padding-left:50px;
+			table-layout:fixed;
+			border-right:1px solid #666;
+		}
+		#sec table tr td{
+			width:200px;
+			height:50px;
+			color:#666;
+			font:20px bold 宋体;
+			line-height:50px;
+		}
+		#sec table td input{
+			height:30px;
+			outline:0;
+			margin-left:30px;
+		}
+		#sec table td button{
+			width:100%;height:80%;
+			background:#72A528;
+			color:#fff;
+			font-size:16px;
+		}
+	/*内容右侧	*/
+		#sec .right{
+			position:absolute;
+			top:50px;
+			right:400px;
+		}
+		#sec .right p{
+			color:#72A528;
+			font-size:14px;
+		}
+		#sec .right [class='login']{
+			width:100px;height:30px;
+			color:#fff;
+			display:inline-block;
+			background:#FF5F8C;
+			font-size:14px;
+			text-decoration:none;
+			line-height:30px;
+			text-align:center;
+			margin:10px 0;
+			border-radius:3px;
+		}
+		#sec .right h6{margin-top:13px;}
+		#sec .right img{
+			width:40px;height:40px;
+			margin-top:5px;
+		}
+/*脚部footer*/
+	/*脚部1footer-top	*/
+		#footer-top{
+			width:100%;height:200px;
+			display:flex;
+			justify-content:space-around;
+		}
+		#footer-top div{
+			width:15%;
+		}
+		#footer-top div ul{
+			color:#666;
+			font-size:12px;
+		}
+		#footer-top li{
+			height:35px;
+			line-height:35px;
+			margin-left:50px;
+		}
+		#footer-top div img{
+			width:16px;height:16px;
+			vertical-align:middle;
+		}
+		#footer-top #d1{
+			width:25%;
+			margin:0 100px;
+		}
+		#footer-top div .top{
+			list-style:none;
+			color:#000;
+			font:16px bold;
+			margin-left:35px;
+		}
+		#footer-top .d1{
+			margin:0 80px;
+		}
+		#footer-top div .focus{
+			width:50%;height:50%;
+			margin-left:30px;
+		}
+	/*footer-bt	*/
+		#footer-bt{
+			width:100%;height:110px;
+			text-align:center;
+			color:#666;
+			font-size:12px;
+			border-bottom:1px solid #000;
+		}
+		#footer-bt .p-bt{
+			margin-top:50px;
+		}
+
+
+
+

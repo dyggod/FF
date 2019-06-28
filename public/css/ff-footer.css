@@ -1,0 +1,121 @@
+body{
+    background-color: #202020;
+}
+div.footer-top{
+     background: url('../templates/cn/images/down_img1.jpg') repeat;
+     height: 230px;
+ }
+/*响应式footer-top高度*/
+@media screen and (max-width: 767px){
+    div.footer-top{
+        height: 440px;
+    }
+    div.footer-tr{
+        margin-top: 3rem !important;
+    }
+    div.footer-bt>div,div.footer-bt>p{
+        max-width: 100% !important;
+    }
+    div.footer-bt>p{
+        max-width: 50%;
+    }
+}
+/*脚部 top*/
+div.footer-top,div.footer-tl a{
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+div.footer-tl>div p{
+    color:#fff;
+    font-size: 24px;
+}
+div.footer-tl ul li{
+    height:25%;
+}
+div.footer-tl a.li-top,div.footer-tr a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+a.li-top>span,a.li,.td-top>span{
+    color: #666;
+    font-size: 14px;
+}
+ul.ul2>li>a.w-100{
+    border-bottom: 1px solid #666;
+}
+div.footer-tr>table td{
+    width: 15rem;
+    height: 3rem;
+}
+div.footer-tr>table td>input{
+    color:#666;
+    font-size: 14px;
+    background-image: url('../templates/cn/images/down_img1.jpg');
+    outline: 0;
+    padding: 0;
+    border:1px solid #666;
+    cursor: pointer;
+    padding-left: 1rem;
+}
+div.footer-tr>table td>input:focus{
+    border-color: rgba(0, 123, 255,0.5);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+    /* 定义input框失去焦点后td显示效果 */
+div.footer-tr>table td.vali_info{display:none}   
+div.footer-tr>table td.vali_fail{
+    display:block;
+    height: 2.5rem;
+    line-height:2.5rem;
+    background-color:#1a1a1a;
+    color:Red;
+    padding-left:10px;
+}  
+div.footer-tr>table td>a{
+    color: #fff;
+    background-color: #5d5d5d;
+    font-size: 12px;
+}
+
+
+/*脚部 bottom*/
+div.footer-middle{
+    height: 40rem;
+    background-image: url('../templates/cn/images/down_img2.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    line-height: 15rem;
+
+}
+div.footer-middle>div>img{
+    vertical-align: middle;
+    max-width: 100%;
+    border-bottom: 1px solid #666;
+}
+div.footer-bt{
+    height: 10%;
+    line-height: 2rem;
+    color: #ccc;
+    font-size: 10px;
+}
+div.footer-bt>div>ul>li{
+    width: 1.5rem;
+    margin-left: 1rem;
+}
+div.footer-bt>div>ul a{
+    height: 1.5rem;
+    background-image: url('../templates/cn/images/down_img4.png');
+    background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+

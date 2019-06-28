@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload='get_user()'>
+	<script>
+		function get_user(){
+			//1.创建异步对象
+			var xhr=new XMLHttpRequest();
+			console.log(111);
+			//4.绑定监听,接受请求
+			xhr.onreadystatechange=function(){
+				console.log(111);
+				if (xhr.readyState==4&&xhr.status==200)
+				{			 console.log(222);
+					var result=xhr.responseText;
+					console.log(result);
+				}										 
+			};
+			//3.打开链接
+			xhr.open('get','/cp/getPro',true)
+			//4.发送请求
+			xhr.send();
+		};
+		console.log(111);
+	</script>
+</body>
+</html>

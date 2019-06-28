@@ -1,0 +1,145 @@
+header>div.container-fluid{
+  background-color:rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+//section内容部分
+  //顶部图片 sec-top
+section{
+  div.header-bg{
+    background-color: #000;
+    height:5rem;
+  }
+  div.sec-top{
+    background-color: #000;
+    margin-top: 0.5rem;
+  }
+  //内容中部 sec-middle
+    //内容中部vip
+  div.sec-middle>div.middle-vip{
+    background-color: #202020;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  div.sec-middle>div.middle-vip>div>p{
+    color: #aaa;
+    margin-bottom: 0;
+  }
+  div.sec-middle>div.middle-vip>div>p:first-child{
+    height: 2rem;
+    background:url('../templates/cn/images/about_img3.jpg') top center no-repeat;
+  }
+  div.sec-middle>div.middle-vip>div>p.vip{
+    color: #fff;
+    font-size: 26px;
+  }
+  div.sec-middle>div.middle-vip>div>p:last-child{
+    display:inline-block;
+    width: 8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #666;
+  }
+      //内容中部核心
+  div.sec-middle>div.middle-core{
+    background-color: #000;
+  }
+  div.sec-middle>div.middle-core>div>a{
+    width: 8rem;
+    height: 4rem;
+    line-height:4rem;
+    text-align: center;
+    color: #ddd;
+    font-size: 18px;
+
+  }
+  div.sec-middle>div.middle-core>div>a:hover{
+    text-decoration: none;
+    background-color: #202020;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+  }
+  div.sec-middle>div.middle-core>div>a:focus{
+    text-decoration: none;
+    background-color: #202020;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+  }
+
+  div.sec-middle>div.middle-core>div.cor-middle>div{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 4rem;
+    border-top:1px solid #666;
+    border-bottom:1px solid #666;
+    color:#aaa;
+  }
+  div.core{
+    padding:0 8rem;
+    >div>div>input[type=text]{
+      width:100%;
+      height:3rem;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      background-color: #000;
+      color:#666;
+      outline: 0;
+      border: 1px solid #666;
+    }
+    >div>div>textarea{
+      margin: 1rem 0;
+      padding-left: 1rem;
+      background-color: #000;
+      color:#666;
+    }
+    >div>div>input:hover,>div>div>textarea:hover{
+      cursor:pointer;
+    }
+    >div>div>input:focus,,>div>div>textarea:focus{
+    border-color: rgba(0, 123, 255,0.5);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+    >div>div>a{
+      height:3rem;
+      background-color:#4d4d4d;
+      margin: 1rem 0;
+      color:#fff;
+      line-height:3rem;
+      text-decoration:none;
+    }
+    //使用范围及性别
+    div>div>div.use,div>div>div.gender{
+      height:3rem;
+      border:1px solid #666;
+      margin: 1rem 0;
+      line-height:3rem;
+      padding-left:1rem;
+      color:#aaa;
+    }
+  }
+  //申请表及会员权益图片正常隐藏,点击时出现
+  div.core-bt{
+    display: none;
+
+  }
+  div.core-bt:target {
+    display: block;
+  }
+
+}
+
+
+
+
+//media  媒体查询
+@media screen and (max-width: 991px) {
+  //调整height背景高度
+  section{
+    div.header-bg{
+      height:9rem;
+    }
+    div.sec-top{
+      margin-top:0;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+ </head>
+ <body>
+	<table >
+		<tr>
+			<td colspan='2'>用户: <input type="text" id='uname' onblur='uname_blur()' onfocus='uname_focus()'>
+			</td>
+			<td width='130px'><span id='s1'></span></td>
+		</tr>
+		<tr>
+			<td colspan='2'>密码: <input type="password" id='upwd' onblur='upwd_blur()' onfocus='upwd_focus()'>
+			</td>
+			<td width='130px'><span id='s2'></span></td>
+		</tr>
+		<tr>
+			<td><button onclick='login()'>登录</button></td>
+			<td align='right'><button><a href="user_reg.html">新用户注册</a></button></td>
+		</tr>
+
+	</table>
+	<script>
+	//1.焦点事件
+	  //用户名失去焦点事件
+	function uname_blur(){
+		if (!uname.value)
+		{
+			s1.innerHTML='用户名不能为空';
+		}
+	};
+	//用户名得到焦点事件
+		function uname_focus(){
+			s1.innerHTML='用户名需在3~9位'
+		};
+	//密码失去焦点事件
+	function upwd_blur(){
+		if (!upwd.value)
+		{
+			s2.innerHTML='密码不能为空';
+		}
+	};
+	//密码得到焦点事件
+	function upwd_focus(){
+		s2.innerHTML='密码需6~15位';
+	};
+	//2.登录事件
+	function login(){
+		//1.
+		var xhr=new XMLHttpRequest();
+		//2.
+		xhr.open('post','/user/login',true)
+		//修改头信息
+		xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+		formdata='uname='+uname.value+'&upwd='+upwd.value;
+		//3.
+		xhr.send(formdata);
+		//4.
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200)
+			{
+				var result=xhr.responseText;
+				//console.log(result)
+				if (result=='200')
+				{
+					alert('登录成功')
+				}else if (result=='401')
+				{
+					alert('用户名不能为空')
+				}else if (result=='402')
+				{
+					alert('密码不能为空');
+				}else alert('登录失败')
+			}
+		};
+	};
+	</script>	
+
+ </body>
+</html>

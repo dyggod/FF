@@ -1,0 +1,255 @@
+
+
+/**********内容 section********/
+/*轮播图*/
+    /*轮播左右按钮*/
+div.carousel>a{
+    width: 3%;height: 20%;
+    top:40%;
+    background-color:#333;
+}
+    /*轮播指示符*/
+ul.carousel-indicators>li{
+    width: 13px;height: 13px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 15px;
+}
+ul.carousel-indicators>li.active{
+    background-color: #000;
+}
+ul.carousel-indicators>li:hover{
+    cursor:pointer;
+}
+/*车型导航*/
+    /*左侧消息栏*/
+div.car-type,div.card{
+    background-color: #000;
+    padding-bottom: 3rem;
+}
+div.car-tl>div>div>img{
+    margin-top: 4rem;
+}
+    /*卡片头*/
+    /*卡片内容*/
+div.card-body>ul>li{
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+div.card-bd1{
+    width: 40%;
+    border-right:1px solid #666;
+}
+div.card-bd1>p:first-child,div.card-bd1>p:last-child{
+    text-align: center;
+    font-size: 24px;
+    color:#666;
+    font-weight: bolder;
+    margin: 0;
+}
+div.card-bd1>p:last-child{
+    font-size: 14px;
+    font-weight: normal;
+}
+div.text-truncate>p{
+    font-size: 12px;
+    color:#666;
+    margin: 0;
+}
+div.card-body a{
+    color:#aaa;
+    font-size: 12px;
+    text-decoration:none;
+}
+div.card a:hover{
+    color:#ffffff;
+}
+    /*卡片脚*/
+div.card-footer>a{
+    color:#666;
+    border-color: #666 !important;
+    border-radius: 0;
+}
+div.card-footer>a:hover{
+    color:#000 !important;
+    background-color: #fff;
+}
+/*右侧车型栏*/
+div.car-tr{
+    background-color:#202020;
+}
+div.car-tr table{
+    height: 14rem;
+}
+div.car-tr table tr td{
+    border-top: 1px solid #666 !important;
+    line-height: 5rem;
+}
+tr.tr2>td{
+    border-bottom: 1px solid #666 !important;
+
+}
+div.car-tr td+td{
+    border-left:1px solid #666;
+}
+div.car-tr>div>a{
+    color:#666;
+    border-color: #666 !important;
+    border-radius: 0;
+}
+div.car-tr>div>a:hover{
+    color:#000 !important;
+    background-color: #fff;
+}
+    /*车标鼠标悬停 图片换成亮图并放大*/
+div.car-tr-bt td>a:last-child:hover{
+    transition: transform 1s;
+}
+div.car-tr-bt td>a:last-child:hover{
+    transform: scale(1.5);
+} 
+div.car-tr-bt td>a:last-child{
+    display: none;
+}
+div.car-tr-bt td:hover a.down{
+    display: none !important;
+}
+div.car-tr-bt td:hover a.up{
+    display: inline-block
+}
+/*推荐车型/爆款车型/人气新车*/
+div.recommend>div.reco-titile>div{
+    height: 5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    line-height: 5rem;
+}
+div.recommend>div.reco-titile>p{
+    margin-top: -30px;
+}
+div.recommend>div.reco-titile>div>span{
+    color:#666;
+    font-size: 18px;
+}
+div.recommend li.reco-li{
+    border: 1px solid #666;
+   
+}
+    /*推荐车型里card设置*/
+div.recommend div.reco-card,div.reco-card>div{
+    background-color: #202020;
+    border: 0;
+}
+div.recommend div.card a{
+    text-decoration: none;
+}
+div.recommend div.card>div.card-header>a{
+    height: 2.5rem;
+    color:#fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    line-height: 2.5rem;
+}
+div.recommend div.card>div.card-body{
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+div.recommend div.card>div.card-footer{
+    padding: 0;
+}
+div.recommend div.card>div.card-footer>a{
+    width:50%;
+    height: 3rem;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    text-align: center;
+    line-height: 3rem;
+    color:#aaa;
+}
+div.recommend div.card>div.card-footer>a:hover{
+    background-color: #303030;
+    color:#fff !important;
+}
+    /*推荐车型里鼠标悬停显示透明价格*/
+a.li-model{
+    display: block;
+    height: auto;
+}
+div.pf-img-model{
+    width: 100%;height:100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center;
+}
+div.recommend>ul>li:hover div.pf-img-model{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+div.recommend>ul>li:hover{
+    cursor:pointer;
+}
+div.recommend>ul>li:hover img.img-model{
+    opacity: 0.4;
+    transition: all 1s;
+}
+
+
+/*引入脚*/
+footer>iframe{
+    height: 52rem;
+}
+
+
+/*媒体查询*/
+/*中屏*/
+@media screen and (max-width: 991px) and (min-width: 768px){
+
+    li.nav-item+li.nav-item{
+        border-left:0;
+    }
+    li.nav-item{
+        border-top: 1px solid #666;
+        border-right: 1px solid #666;
+    }
+    div.phone{
+        border-left:0;
+    }
+    footer>iframe{
+        height: 35rem;
+    }
+}
+@media screen and (max-width:767px){
+    header img.w-100{
+        width:70% !important;
+    }
+    div.header-left{
+        border:0;
+    }
+    div.header-rt{
+        border-top: 1px solid #666;
+    }
+    ul.navbar-nav>li{
+        border-left:0 !important;
+    }
+    div.phone{
+        border-left: 0;
+    }
+    /*新闻区图片隐藏*/
+    div.car-tl>div>div:first-child{
+        display: none;
+    }
+    /*新闻脚居中*/
+    div.card-footer{
+        text-align: center ;
+    }
+    /*脚部iframe高度变高*/
+    footer>iframe{
+        height: 50rem;
+    }
+}

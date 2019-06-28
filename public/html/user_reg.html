@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/user_reg.css"> 
+  <title>注册页面</title>
+ </head>
+ <body>
+	<header>
+		<div id='header-top'>
+			<div id='left'>
+				<img src="../image/register/r1.png" alt="">
+				<a href="user_login.html">登录</a>
+				<span>|</span>
+				<img src="../image/register/r2.png" alt="">
+				<a href="user_reg.html">注册</a>
+				<span>|</span>
+				<a href="index.html">首页</a>
+				<span>[<a href="#" id='city'>切换城市</a>]</span>
+			</div>
+			<div id='right'>
+				<img src="../image/register/r3.png" alt="">
+				<a href="#">手机客户端</a>
+				<span>|</span>
+				<img src="../image/register/r4.png" alt="">
+				<a href="#">购物车</a>
+				<span>|</span>
+				<span>快捷导航</span>
+				<img src="../image/register/r5.png" alt="">
+				<span>咨询热线:</span>
+				<span class='phone'>13598580362</span>
+			</div>
+		</div>
+		<div id='header-bt'>
+			<div>
+				<img src="../image/register/logo (1).png" alt="">
+				<span>|</span>
+				<span>免费注册</span>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div id='sec'>
+			<ul>
+				<li>个人注册</li>
+				<li>商家注册</li>
+				<li>酒店注册</li>
+			</ul>
+			<table>
+				<tr>
+					<td colspan='2'>用户: <input type="text" id='uname' onblur='uname_blur()' onfocus='uname_focus()'></td>
+					<td width='130px'><span id='s1'></span></td>
+				</tr>
+				<tr>
+					<td colspan='2'>密码: <input type="text" id='upwd' onblur='upwd_blur()' onfocus='upwd_focus()'></td>
+					<td><span id='s2'></span></td>
+				</tr>
+				<tr>
+					<td colspan='2'>电话: <input type="text" id='phone'></td>
+					<td><span id='s3'></span></td>
+				</tr>
+				<tr>
+					<td colspan='2'>真名: <input type="text" id='user_name'></td>
+					<td><span id='s4'></span></td>
+				</tr>
+				<tr>
+					<td colspan='2'> 性别:
+					 <input type="radio" id='g_man' name='gender' value='1'><span>男</span>
+							<input type="radio" id='g_women' name='gender' value='0'><span>女</span>
+					</td>
+				</tr>
+				<tr>
+					<td><button onclick='reg()'>立即注册</button></td>
+					<td></td>
+				</tr>
+			</table>
+			<div class='right'>
+				<p>我已有账号</p>
+				<a href="user_login.html" class='login'>立即登录</a>
+				<h6>合作网站账号登录:</h6>
+				<a href='#'><img src="../image/register/qq.png" alt=""></a>
+				<a href='#'><img src="../image/register/sina.png" alt=""></a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div id='footer-top'>
+			<div id='d1'>
+				<ul>
+					<li class='top'>联系我们</li>
+					<li>
+						<img src="../image/register/r5.png" alt="" />
+						<span>热线电话：13598580362</span>
+					</li>
+					<li>
+						<img src="../image/register/r6.png" alt="" />
+						<span>E-mail:648093171@qq.com</span>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li class='top'>新人帮助</li>
+					<li>订单管理</li>
+					<li>消费保障</li>
+					<li>注册会员</li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li class='top'>企业服务</li>
+					<li>商家入驻</li>
+				</ul>	
+			</div>
+			<div>
+				<ul>
+					<li class='top'>结婚工具</li>
+					<li>婚礼代办事项</li>
+					<li>婚礼当日流程</li>
+					<li>婚礼合同下载</li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li class='top'>关注我们</li>
+					<img src="../image/register/r7.png" alt="" class='focus'/>
+				</ul>
+			</div>
+		</div>
+		<div id='footer-bt'>
+			<p>服务条款 投诉意见 免责声明 注册协议 关于我们 人才招聘 友情链接 联系我们</p>
+			<p>Copyright © 2018 豪车租赁,超跑出租,豪车自驾,租跑车,租豪车,全国高端车租赁平台 All rights reserved. ICP备案：京ICP备13010812号</p>
+			<p class='p-bt'>站长统计</p>
+		</div>
+	</footer>
+	<script>
+	//1.用户名事件
+		//1.1用户名失去焦点事件
+		function uname_blur(){
+			//1.创建xhr对象
+			var xhr=new XMLHttpRequest();
+			//2.打开链接
+			xhr.open('get','/user/uname_blur?uname='+uname.value,true);
+			//3.发送请求
+			xhr.send();
+			//4.绑定监听,接受请求
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					if (result=='401')
+					{
+						s1.innerHTML='用户名不能为空';
+					}else if (result=='200')
+					{
+						s1.innerHTML='用户名已被占用';
+					}else if (result=='409')
+					{		
+						s1.innerHTML='用户名可以使用';
+					}
+				}
+			};
+		};
+		//1.2用户名得到焦点事件
+		function uname_focus(){
+			s1.innerHTML='用户名需3~9位';
+		};
+	//2.密码焦点事件
+		function upwd_focus(){
+			s2.innerHTML='密码需在6~15位';
+		};	
+		function upwd_blur(){
+			if (!upwd.value)
+			{
+				 s2.innerHTML='密码不能为空';
+			}	
+			
+		};
+	//注册提交事件
+		function reg(){
+			//1.
+			var xhr=new XMLHttpRequest();
+			//2.
+			xhr.open('post','/user/reg',true);
+			//修改头信息
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+			//性别选中设置
+			var gender='';
+			if (g_man.checked)
+			{
+				gender=g_man.value;
+			}else if (g_women.checked)
+			{
+				gender=g_women.value;
+			}
+			formdata='uname='+uname.value+'&upwd='+upwd.value+'&phone='+phone.value+'&user_name='+user_name.value+'&gender='+gender;
+			//3.
+			xhr.send(formdata);
+			//4.
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					//console.log(result);
+					if (result=='401')
+					{alert('用户名不能为空')
+					}
+					else if (result=='402')
+					{alert('密码不能为空')
+					}
+					else if (result=='403')
+					{alert('电话不能为空')
+					}
+					else if (result=='404')
+					{alert('真名不能为空')
+					}
+					else if (result=='405')
+					{alert('性别不能为空')
+					}
+					else if (result=='200')
+					{
+						alert('注册成功');
+						location.href='http://localhost:8080/user_login.html';
+					}
+					else alert('注册失败')
+				}
+			};
+		};
+	</script>
+ </body>
+</html>
+
+
+
+
+
+

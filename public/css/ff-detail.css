@@ -1,0 +1,87 @@
+section div.detail {
+  margin-top: 3rem;
+  color: #fff;
+  padding-bottom: 0.5rem; }
+  section div.detail div.detTop {
+    height: 2rem;
+    font-size: 18px;
+    background: url("../templates/cn/images/about_img3.jpg") center no-repeat; }
+  section div.detail div.detMiddle {
+    text-align: center;
+    font-size: 24px;
+    background: url("../templates/cn/images/about_img4.jpg") bottom no-repeat;
+    padding-bottom: 1rem; }
+  section div.detail div.detBottom {
+    margin-top: 1rem; }
+    section div.detail div.detBottom > div {
+      margin: 0 auto; }
+    section div.detail div.detBottom ul {
+      list-style: none;
+      justify-content: space-around; }
+    section div.detail div.detBottom select {
+      background-color: #000;
+      color: #fff; }
+
+section div#img {
+  height: 50rem;
+  background-color: #000;
+  padding-top: 2rem; }
+  section div#img div.prev {
+    top: 35rem;
+    left: 12rem; }
+  section div#img div.next {
+    top: 35rem;
+    right: 12rem; }
+  section div#img div#content {
+    width: 900px;
+    overflow: hidden; }
+  section div#img div#content > ul {
+    margin-left: 0px;
+    padding: 0; }
+    section div#img div#content > ul li {
+      margin: auto; }
+      section div#img div#content > ul li img {
+        max-width: 900px; }
+  section div#img div.point {
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    padding-top: 2rem; }
+    section div#img div.point a {
+      display: inline-block;
+      width: 10rem;
+      height: 3rem;
+      background-color: #fff;
+      border-radius: 3px;
+      line-height: 3rem;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px; }
+
+section div.intr {
+  background-color: #000;
+  color: #fff; }
+  section div.intr div.container > div > p:first-child {
+    border-top: 1px solid #666;
+    padding-top: 2rem;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold; }
+  section div.intr div.container div.intr-d1 p.intr-p1 {
+    color: #666;
+    font-size: 14px; }
+  section div.intr div.container div.intr-d1 table {
+    margin: auto;
+    color: #666;
+    text-align: center; }
+    section div.intr div.container div.intr-d1 table td {
+      height: 4rem;
+      border: 1px solid #666; }
+  section div.intr div.container div.blank {
+    height: 10rem; }
+  section div.intr div.container div.intr-d2 div {
+    padding-top: 2rem;
+    margin: auto; }
+  section div.intr div.container div.intr-d3, section div.intr div.container div.intr-d4 {
+    height: 8rem;
+    line-height: 3rem; }

@@ -1,0 +1,109 @@
+
+// 内容section
+section{
+    div.detail {
+        margin-top: 3rem;
+        color: #fff;
+        padding-bottom: 0.5rem;
+        div.detTop {
+            height: 2rem;
+            font-size: 18px;
+            background: url('../templates/cn/images/about_img3.jpg') center no-repeat
+        }
+        div.detMiddle {
+            text-align: center;
+            font-size: 24px;
+            background: url('../templates/cn/images/about_img4.jpg') bottom no-repeat;
+            padding-bottom: 1rem;
+        }
+        div.detBottom {
+            margin-top: 1rem;
+            > div {
+                margin: 0 auto;
+            }
+            ul {
+                list-style: none;
+                justify-content: space-around;
+            }
+            select {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+    div#img{
+        height: 50rem;
+        background-color:#000;
+        padding-top: 2rem;
+        div.prev{top: 35rem;left:12rem;}
+        div.next{top:35rem;right:12rem}
+        div#content{
+            width:900px;
+            overflow: hidden;
+        }
+        div#content>ul{
+            margin-left:0px;
+            padding: 0;
+            li{
+                margin:auto;
+                img{max-width: 900px;}
+            }
+        }
+        div.point{
+            height:5rem;
+            text-align: center;
+            line-height:5rem;
+            padding-top:2rem;
+            a{
+                display:inline-block;
+                width:10rem;height:3rem;
+                background-color: #fff;
+                border-radius: 3px;
+                line-height:3rem;
+                color:#000;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+    }
+    div.intr{
+        background-color:#000;
+        color:#fff;
+        div.container{
+            >div>p:first-child{
+                border-top:1px solid #666;
+                padding-top:2rem;
+                color:#fff;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            div.intr-d1{
+                p.intr-p1{
+                    color:#666;
+                    font-size: 14px;
+                }
+                table{
+                    margin: auto;
+                    color:#666;
+                    text-align: center;
+                    td{
+                        height: 4rem;
+                        border:1px solid #666;
+                    }
+                }
+            }
+            div.blank{height:10rem;} 
+            div.intr-d2{
+                div{
+                    padding-top:2rem;
+                    margin:auto;
+                }
+            }
+            div.intr-d3,div.intr-d4{
+                height:8rem;
+                line-height:3rem;
+            }
+        }   
+    }
+    
+}

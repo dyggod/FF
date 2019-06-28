@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>用户修改</title>
+ </head>
+ <body onload='get_upd()'>
+	用户名称: <input type="text" id='uname'><br>
+	用户密码: <input type="text" id='upwd'><br>
+	练习方式: <input type="text" id='phone'> <br>
+	真实姓名: <input type="text" id='user_name'>	<br>
+	用户性别: <input type="radio" id='g_man' name='gender' value='1'>男
+						<input type="radio"id='g_women' name='gender' value='0'>女<br>
+	<button onclick='upd_user()'>提交修改</button>
+	<script>
+		function get_upd(){
+			//获取列表页面传过来的值
+			var urlParams=new URLSearchParams(location.search);
+			var uid=urlParams.get('uid')
+			//1.
+			var xhr=new XMLHttpRequest();
+			//2.
+			xhr.open('get','/user/get_upd?uid='+uid,true);
+			//3.
+			xhr.send();
+			//4.
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					//json 解析
+					var users=JSON.parse(result);
+					//将传回的数据加载到输入框里
+					uname.value=users[0].uname;
+					upwd.value=users[0].upwd;
+					phone.value=users[0].phone;
+					user_name.value=users[0].user_name;
+					//性别转化 并显示到单选框
+					if (users[0].gender==1)
+					{
+						g_man.checked=true;
+					}else if (users[0].gender==0)
+					{
+						g_women.checked=true;
+					}
+				}
+			};
+		};
+	</script>
+ </body>
+</html>

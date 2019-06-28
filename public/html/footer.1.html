@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>脚部</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/popper.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="../css/footer.css"/>
+</head>
+<body>
+<div class="container-fluid p-0">
+    <div class="footer-top row p-0 m-0">
+        <div class="col-md-6 col-sm-12 footer-tl ">
+            <div class="d-flex justify-content-md-between mt-4 pr-md-5">
+                <ul class="list-unstyled">
+                    <li class="h-25"><a href="#" class="li-top">联系飞飞/CONTACT</a></li>
+                    <li>
+                        <p>
+                            +8613598580362
+                        </p>
+                    </li>
+                    <li>电话：13598580362</li>
+                    <li>邮箱：dyggod@163.com</li>
+                    <li>邮编：200002</li>
+                    <li>地址：北京市海淀区万寿路</li>
+                </ul>
+                <ul class="list-unstyled ul2">
+                    <li><a href="#" class="li-top">关于飞飞<span>/FEIFEI</span></a></li>
+                    <li><a href="#" class="d-inline-flex w-100">关于飞飞</a></li>
+                    <li><a href="#" class="d-inline-flex w-100">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 footer-tr mt-4">
+            <table>
+                <tr>
+                    <td colspan="3"><h5><a href="#" class="td-top">申请会员<span>/TO APPLY FOR</span></a></h5></td>
+                </tr>
+                <tr>
+                    <td class="">
+                        <input class="w-100 h-75" type="text" id="uname" placeholder="姓名/NAME"/>
+                    </td>
+                    <td style="width:15px"></td>
+                    <td class="">
+                        <input class="w-100 h-75" type="text" id="upwd" placeholder="密码/PASSWORD"/>
+                    </td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <button onclick="login()">    
+                            登录
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer-middle p-0 d-flex flex-column justify-content-start ">
+        <div>
+            <img class="w-100" src="../templates/cn/images/wx.png" alt=""/>
+        </div>
+        <div class="footer-bt row flex-md-row-reverse p-0 m-0">
+            <div class="col-md-6  h-100 pt-2 d-flex justify-content-md-end justify-content-sm-center pr-md-5  ">
+                <span>关于我们:</span>
+                <ul class="list-unstyled d-flex ">
+                    <li class="center"><a  class="w-100 d-inline-block" href="#"></a></li>
+                    <li class="center"><a  class="w-100 d-inline-block" href="#"></a></li>
+                    <li class="center"><a  class="w-100 d-inline-block" href="#"></a></li>
+                    <li class="center"><a  class="w-100 d-inline-block" href="#"></a></li>
+                </ul>
+            </div>
+            <p class="col-md-6 text-sm-center p-0">Copyright © 2000-2015 本森超跑俱乐部 沪ICP备10207361号-1 www.benson-car.com All Rights Reserved</p>
+        </div>
+    </div>
+</div>
+<script>
+    function login(){
+        //1.
+        var xhr=new XMLHttpRequest();
+        //2. 创建请求
+        xhr.open('post','/user/login',true);
+        //修改请求头
+        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        //3.发送请求
+        var formdata='uname='+uname.value+'&upwd='+upwd.value;
+        xhr.send(formdata);
+        //4.绑定监听,接受请求
+        xhr.onreadystatechange=function(){
+            if (xhr.readyState==4&&xhr.status==200)
+            {
+                var result=xhr.responseText;
+                alert(result);
+            }
+        };
+    };
+
+</script>
+</body>
+</html>

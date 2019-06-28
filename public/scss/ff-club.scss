@@ -1,0 +1,219 @@
+body{
+  background-color: #202020;
+}
+header>div.container-fluid{
+  background-color:rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+//section内容部分
+  //顶部图片 sec-top
+section {
+  div.header-bg {
+    background-color: #000;
+    height: 5rem;
+  }
+  div.sec-top {
+    background-color: #000;
+    margin-top: 0.5rem;
+  }
+  //内容中部 车型导航 sec-nav
+  div.sec-nav{
+    background-color:#000;
+    //内容中部 车型导航 vip
+    div.sec-vip{
+      background-color: #202020;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+      text-align: center;
+      border-top:8px solid #000;
+    }
+    div.sec-vip>div>p{
+      color: #aaa;
+      margin-bottom: 0;
+    }
+    div.sec-vip>div>p:first-child{
+      height: 2rem;
+      background:url('../templates/cn/images/about_img3.jpg') top center no-repeat;
+    }
+    div.sec-vip>div>p.vip{
+      color: #fff;
+      font-size: 26px;
+    }
+    div.sec-vip>div>p:last-child{
+      display:inline-block;
+      width: 8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #666;
+    }
+    //brand-top
+    div.sec-top{
+      a{
+        width: 8rem;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        color: #ddd;
+        font-size: 18px;
+        text-decoration:none;
+      }
+      a:hover{
+        background-color: #202020;
+        border-bottom: 2px solid #fff;
+        color:#fff;
+      }
+    }
+    //内容部分 车型导航 sec-brand
+    div.sec-brand{
+      div.brand-car{
+        height:500px;
+        transition:height 0.5s linear;
+        overflow: hidden;
+      }
+      //开头字母搜索栏
+      div.brand-search{
+        border-top: 1px solid #666;
+        padding:2rem 5rem;
+        >div{padding: 0 4rem}
+        div>span{
+          color:#7b7b7b;
+          font-size: 14px;
+          padding-top: 0.25rem;
+          margin-left: 1.5rem;
+        }
+        div>a{
+          color:#666;
+          font-size: 18px;
+          text-decoration: none;
+          font-weight: bold;
+          margin-left: 1.5rem;
+        }
+        div>a:hover{
+          color:#fff;
+        }
+      }
+      //车标图片栏
+      div.brand-img{
+        padding: 0 4rem;      
+        table{
+          tr{border: 1px solid #666}
+          td{width:20%;}
+          td+td{border-left: 1px solid #666}
+        }
+        table.tab2{
+          tr:last-child>td{border-right:1px solid #666}
+        }
+      }
+
+    }
+
+  }
+  //推荐车型
+  div.recommend{
+    >div.reco-titile>div{
+      height: 5rem;
+      text-align: center;
+      color: #fff;
+      font-size: 26px;
+      line-height: 5rem;
+    }
+    >div.reco-titile>p{
+      margin-top: -30px;
+    }
+    >div.reco-titile>div>span{
+      color:#666;
+      font-size: 18px;
+    }
+      li.reco-li{
+      border-left: 1px solid #666;
+      border-bottom:1px solid #666 ;
+      border-top:1px solid #666 ;
+    }
+    //推荐车型里card设置
+    div.reco-card,div.reco-card>div{
+      background-color: #202020;
+      border: 0;
+    }
+    div.card a{
+      text-decoration: none;
+    }
+    div.card>div.card-header>a{
+      height: 2.5rem;
+      color:#fff;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      line-height: 2.5rem;
+    }
+    div.card>div.card-body{
+      padding-top: 0;
+      padding-bottom: 2rem;
+    }
+    div.card-body a{
+      color:#aaa;
+      font-size: 12px;
+      text-decoration:none;
+    }
+    div.card a:hover{
+      color:#ffffff;
+    }
+    div.card>div.card-footer{
+      padding: 0;
+    }
+    div.card>div.card-footer>a{
+      width:50%;
+      height: 3rem;
+      border-top: 1px solid #666;
+      border-right: 1px solid #666;
+      text-align: center;
+      line-height: 3rem;
+      color:#aaa;
+    }
+    div.card>div.card-footer>a:hover{
+      background-color: #303030;
+      color:#fff !important;
+    }
+    //推荐车型里鼠标悬停显示透明价格
+    a.li-model{
+      display: block;
+      height: auto;
+    }
+    div.pf-img-model{
+      width: 100%;height:100%;
+      position: absolute;
+      top: 0;
+      display: none;
+      text-align: center;
+    }
+    >ul>li:hover div.pf-img-model{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    >ul>li:hover{
+      cursor:pointer;
+    }
+    >ul>li:hover img.img-model{
+      opacity: 0.4;
+      transition: all 1s;
+    }
+
+  }
+}
+//媒体查询
+@media screen and (min-width: 768px){
+  div.recommend li.reco-li{
+    width:25%;
+  }
+}
+@media screen and (max-width:767px){
+    div.recommend li.reco-li{
+      width:100%;
+    }
+    div.brand-search,div.brand-search>div{
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+    section div.sec-nav div.sec-brand div.brand-car{
+      height:800px;
+    }
+}
